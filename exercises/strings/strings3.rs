@@ -19,21 +19,7 @@ fn compose_me(input: &str) -> String {
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons"!
-    let s=input.to_string();
-    let mut res=String::new();
-    for i in s.split_whitespace()
-    {
-        let word=i.to_string();
-        if word=="cars"
-        {
-            res=res+"balloons ";
-        }
-        else {
-            res=res+i+" ";
-        }
-    }
-    let ed=res.len();
-    res[0..ed-1].to_string()
+    input.replace("cars","balloons")
 }
 #[cfg(test)]
 mod tests {
